@@ -1,5 +1,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
+
 /* 기본 스타일 */
 *, *::before, *::after {
   /* 첫번째 자식 요소 before, 마지막 자식요소 after */
@@ -66,14 +68,10 @@ body {
   /* 스타일링을 할 때 가급적 ID는 지양해야 함 */
   /*  */
 
-  .member li:nth-child(n + 3)::before {
+  /* .member li:nth-child(n+2)::before {
     content: ":";
     background-color: skyblue;
-  }
-
-  .member li:nth-child(even) {
-    background-color: yellow;
-  }
+  } */
 
 /* 메인 */
 .main {
