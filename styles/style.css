@@ -4,6 +4,7 @@
 *, *::before, *::after {
   /* 첫번째 자식 요소 before, 마지막 자식요소 after */
   box-sizing: border-box;
+  /* box-sizing 속성은 상속이 되지 않음  */
 }
 
 /* 본문 스타일 */
@@ -21,18 +22,58 @@ body {
 
 /* 헤더 */
 .header {
-  background: pink;
+  background: #fff;
   padding: 0 30px;
   /* border-box : width(padding+border)+margin */
   /* auto 명령은 margin 만 가능하다 */
   height: 15vh;
+  border-radius: 0 0 15px 15px;
 }
+
+.member {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+/* :before / ::before => first child */
+/* :after / ::after => last child  */
 
 /* 비주얼 */
 .visual {
   background: orange;
   height: 10vh;
 }
+
+/* 겹침(Cascading) */
+/* 우선순위 규칙 */
+/* li(Type Selector) - 1점 */
+/* .first(Class Selector) - 10점 */
+/* #item(ID Selector) -100점 */
+
+/* .member li::before {
+  content: ":";
+} */
+  /* .meber -> 10점, li -> 1점, ::before -> 1점 = 12점 */
+
+/* .member li:first-child::before {
+  content: "";
+} */
+
+  /* .first -> 10점, ::before -> 1점 = 11점 */
+  /* 선택자의 점수가 같을 때, 나중 것이 적용됨. */
+  /* 스타일링을 할 때 가급적 ID는 지양해야 함 */
+  /*  */
+
+  .member li:nth-child(n + 3)::before {
+    content: ":";
+    background-color: skyblue;
+  }
+
+  .member li:nth-child(even) {
+    background-color: yellow;
+  }
 
 /* 메인 */
 .main {
