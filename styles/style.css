@@ -9,6 +9,13 @@
   /* box-sizing 속성은 상속이 되지 않음  */
 }
 
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
 /* 본문 스타일 */
 body {
   background: beige;
@@ -72,6 +79,10 @@ body {
     content: ":";
     background-color: skyblue;
   } */
+
+  .member a {
+    text-transform: uppercase;
+  }
 
 /* 메인 */
 .main {
