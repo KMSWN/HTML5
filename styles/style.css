@@ -1,5 +1,5 @@
 @import url(./normalize.css);
-@import url(./reset.css);
+/* @import url(./reset.css); */
 
 /* 숨김 컨텐츠 */
 .a11y-hidden {
@@ -32,7 +32,7 @@ body {
   /* em, rem 단위 */
   font-size: 1.4rem;
   color: #222;
-  background: #ccc;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -87,7 +87,30 @@ body {
   padding-right: 0;
 } */
 
+/* 메인 메뉴 */
+.navigation {
+  padding-bottom: 80px;
+}
 
+.menu {
+  background: #e85e2c
+  linear-gradient(
+    to bottom,
+    #ef9126 0%,
+    #e85e2c 35%,
+    #e85e2c 70%,
+    #ef9126 100%
+  );
+}
+
+/* background-color -> 배경색상 */
+/* background-image -> 배경 이미지 */
+/* background-repeat -> 배경 이미지 반복 */
+/* background-position -> 배경 이미지 위치 */
+/* background-attachment -> 배경 이미지 고정 여부 */
+/* background-size -> 배경 이미지 크기 조정 */
+
+/* background -> 모든 background 명령을 선언할 수 있는 단축어 / 공백으로 값과 값을 주면 된다. */
 
 .divider {
   margin-right: 4px;
@@ -135,7 +158,7 @@ body {
 
 /* 푸터 */
 .footer {
-  background: gray;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 
 .footer-inner {
