@@ -58,6 +58,7 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  z-index: 10;
 }
 
 /* 텍스트 링크 모음 */
@@ -97,7 +98,7 @@ body {
 }
 
 .menu {
-  border-top: 2px solid #212121;
+  border-top: 2px solid currentColor;
   background: #e85e2c
   linear-gradient(
     to bottom,
@@ -110,10 +111,14 @@ body {
   display: flow-root;
   padding-left: 230px;
   height: 47px;
+  position: relative;
+}
+
+.menu > li:nth-child(-n+3) {
+  position: relative;
 }
 
 .menu-item {
-  position: relative;
   float: left;
   border-left: 2px solid #fff;
 }
@@ -145,17 +150,26 @@ body {
 .sub-menu {
   background-color : pink;
   position: absolute;
-  left: 0;
   top: 47px;
   display: none;
 }
 
+.menu-html, .menu-css, .menu-standards {
+  left: 0;
+}
+
+.menu-accessibility, .menu-qna, .menu-archive {
+  right: 0;
+}
+
 .is-active .sub-menu {
   display: block;
+  white-space: nowrap;
 }
 
 .sub-menu li {
   display: inline-block;
+  background-color: gold;
   padding-left: 1em;
 }
 
