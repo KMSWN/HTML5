@@ -1,5 +1,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fonts.css);
+
 
 /* 숨김 컨텐츠 */
 .a11y-hidden {
@@ -171,6 +173,28 @@ body {
   display: inline-block;
   background-color: gold;
   padding-left: 1em;
+}
+
+.sub-menu a::before {
+  content: "\f192";
+  font-family: 'fontello';
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sub-menu a:hover::before, .sub-menu a:focus::before {
+  content: "\e800";
 }
 
 /* background-color -> 배경색상 */
