@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<!-- HTML5의 표준 명령문으로, 반드시 선언해야함 -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8" />
-  <!-- XHTML 표준 문법으로는 셀프 클로징 하는 것이 바람직함 -->
-  <!-- charset 설정은 무조건 title 보다 우선되어야 함-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- X의 선언은 비표준 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>웹카페</title>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="./styles/style.css" />
   <script src="./js/main.js" defer></script>
+  <!-- <script src="./js/jquery.min.js"></script>
+  <script src="./js/menu-tab.js"></script> -->
 </head>
 <body>
   <header class="header">
     <h1 class="logo">
       <a href="./index-complete.html">
-        <img src="./assets/logo.png" alt="web cafe" width="165" height="35"/>
+        <img src="./assets/logo.png" alt="web cafe" />
       </a>
     </h1>
     <ul class="member">
@@ -132,7 +130,11 @@
       </ul>
     </nav>
   </header>
-  <div class="visual">비주얼</div>
+  <div class="visual">
+    <div class="visual-text">
+      Web standards &amp; Accessibility
+    </div>
+  </div>
   <main class="main">
     <div class="group group1">그룹1</div>
     <div class="group group2">그룹2</div>
