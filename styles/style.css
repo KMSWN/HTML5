@@ -1,30 +1,33 @@
-
+@import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
-@import url(./fontello.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend {
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
 }
+
 /* 기본 스타일 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 html {
   font-size: 10px;
 }
+
 /* 링크 스타일 */
 a {
   color: inherit;
   text-decoration: none;
 }
+
 /* 본문 스타일 */
 body {
   color: #212121;
@@ -37,6 +40,7 @@ body {
     #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
       repeat 0 0;
 }
+
 /* 레이아웃 */
 .header,
 .visual,
@@ -46,6 +50,7 @@ body {
   width: 940px;
   margin: 0 auto;
 }
+
 /* 헤더 */
 .header {
   background: #fff;
@@ -53,6 +58,7 @@ body {
   border-radius: 0 0 15px 15px;
   position: relative;
 }
+
 /* 로고 */
 .logo {
   position: absolute;
@@ -60,6 +66,7 @@ body {
   left: 60px;
   z-index: 10;
 }
+
 /* 텍스트 링크 모음 */
 .member {
   text-align: right;
@@ -70,25 +77,31 @@ body {
   /* transform 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
   transform: translateX(10px);
 }
+
 .member li {
   display: inline-block;
 }
+
 .member a {
   padding: 6px 10px;
   display: inherit;
   text-transform: uppercase;
 }
+
 /* 마지막 li 요소에 포함된 a 요소를 선택하여 오른쪽 padding 값을 0으로 재정의 하는 방법 */
 /* .member li:last-child a {
   padding-right: 0;
 } */
+
 .divider {
   margin-right: 4px;
 }
+
 /* 메인 메뉴 */
 .navigation {
   padding-bottom: 40px;
 }
+
 .menu {
   border-top: 2px solid currentColor;
   background: #e85e2c
@@ -104,13 +117,16 @@ body {
   height: 47px;
   position: relative;
 }
+
 .menu > li:nth-child(-n + 3) {
   position: relative;
 }
+
 .menu-item {
   float: left;
   border-left: 2px solid #fff;
 }
+
 /* 구체성 -> 10점 */
 .menu-button {
   border: 0;
@@ -122,67 +138,78 @@ body {
   color: #fff;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
+
 /* 구체성 -> 20점 */
 .is-active .menu-button {
   color: #ff0;
 }
+
 .is-active .menu-button::after {
   content: "";
   display: block;
   border-top: 2px solid #000;
 }
+
 .sub-menu {
   position: absolute;
   top: 47px;
   display: none;
   padding: 4px 0;
 }
+
 .menu-html,
 .menu-css,
 .menu-standards {
   left: 0;
 }
+
 .menu-accessibility,
 .menu-qna,
 .menu-archive {
   right: 0;
 }
+
 .is-active .sub-menu {
   display: block;
   white-space: nowrap;
 }
+
 .sub-menu li {
   display: inline-block;
 }
+
 .sub-menu a::before {
-  font-family: 'fontello';
+  content: "\f192";
+  font-family: "fontello";
   font-weight: normal;
-  speak: none;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
-  margin-left: .2em;
+  margin-left: 0.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\f192"
 }
+
 .sub-menu a:hover::before,
 .sub-menu a:focus::before {
   content: "\e800";
 }
+
 .sub-menu a {
   display: inline-block;
   padding: 6px 0;
 }
+
 .sub-menu a:hover,
 .sub-menu a:focus {
   color: #f00;
 }
+
 /* 비주얼 */
 @keyframes moveEffect {
   0% {
@@ -190,6 +217,7 @@ body {
     color: hsla(0, 0%, 0%, 0);
     transform: translate(0, 0);
   }
+
   100% {
     font-size: 24px;
     color: hsla(0, 0%, 0%, 1);
@@ -235,12 +263,6 @@ body {
 
 .visual-text {
   font-family: Georgia, "Times New Roman", Times, serif;
-  animation-name: moveEffect;
-  animation-duration: 3000ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  /* display: inline-block; */
-  position: absolute;
   animation: moveEffect 400ms ease-in-out forwards;
   position: relative;
   z-index: 1;
@@ -248,27 +270,121 @@ body {
 
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
   display: flow-root;
-  padding: 0 15px;
+  background: #fff;
+  min-height: 450px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
+
 .group {
   margin: 0 15px;
   float: left;
 }
+
 .group1 {
-  background-color: violet;
   width: 250px;
 }
+
 .group2 {
   background-color: salmon;
   width: 380px;
 }
+
 .group3 {
   background-color: gold;
   width: 190px;
 }
+
+/* 로그인 */
+.login {
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: yellow;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+}
+
+.user-email, .user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.login-button {
+  height: 53px;
+  position: absolute;
+  background-color: orangered;
+  color: #fff;
+  border: 0;
+  top: 0;
+  right: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.sign {
+  font-size: 13px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.sign a::before {
+  content: "\e802";
+  font-family: "fontello";
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
