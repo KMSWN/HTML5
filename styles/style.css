@@ -385,6 +385,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 유효성 검사 배너 */
+.validation-list {
+  margin-top: 25px;
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a {
+  display: block;
+  border: 2px solid #aaa;
+  border-radius : 20px 20px 20px 20px;
+  background: url("./images/validation_icon.png") no-repeat 25px 45%, #ccc linear-gradient(to bottom, #ccc, #eee);
+  height: 40px;
+  padding: 8px 15px 8px 50px;
+}
+
+.validation-list a:hover, .validation-list a:focus {
+  color: red;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
