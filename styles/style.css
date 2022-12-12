@@ -407,6 +407,48 @@ body {
   color: red;
 }
 
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  border: 1px solid grey;
+  border-radius: 5px 5px 5px 5px;
+  background: grey linear-gradient(to bottom, #ccc, #eee);
+  padding: 10px 15px;
+}
+
+.term-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+}
+
+.term-list div {
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject {
+  float: right;
+  width: 145px;
+}
+
+.term-list-turmbnail {
+  float: left;
+}
+
+.term-list-turmbnail img {
+  vertical-align: middle;
+}
+
+.term-list-brief {
+  margin-top: 10px;
+  float: right;
+  width: 145px;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
